@@ -34,10 +34,10 @@ int main(int argc, const char *argv[]) {
 	for (int x = 0; x < width; x++) {
 		for (int y = 0; y < height; y++) {
 			int ox = depthmap.get(x, y)[0] * pattern_width / 1000;
-			dots[x % pattern_width][y] = dots[(x + ox) % pattern_width][y];
+			int nx = (x + ox) % pattern_width;
+			dots[x % pattern_width][y] = dots[nx][y];
 			
-			image.set(x, y,
-				dots[(x + ox) % pattern_width][y] ? white : black);
+			image.set(x, y, dots[nx][y] ? white : black);
 		}
 	}
 
