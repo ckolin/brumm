@@ -1,5 +1,5 @@
 # brumm
-brumm brumm brumm
+random dot autostereogram generator
 
 ## still image
 ```
